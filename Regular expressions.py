@@ -10,7 +10,7 @@ with open("phonebook_raw.csv", encoding="utf-8") as f:
 
 # TODO 1: выполните пункты 1-3 ДЗ
 header = contacts_list[0]
-phone_pattern = re.compile("(\+7|8)?\s*\(?(\d{3})\)?\s*(\d{3})[\s-]?(\d{2})[\s-]?(\d{2})")
+phone_pattern = re.compile("(\+7|8)?[-\s*]?\(?(\d{3})\)?[-\s*]?(\d{3})[\s-]?(\d{2})[\s-]?(\d{2})")
 phone_replace = r"+7(\2)\3-\4-\5"
 extra_pattern = re.compile(r"(доб\.?\s*(\d+))", re.IGNORECASE)
 extra_replace = r"доб.\2"
